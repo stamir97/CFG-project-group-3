@@ -9,4 +9,7 @@
     #4. The average
     #5. Months with the highest and lowest sales
     #6. Use a data source from a different spreadsheet (see Useful Resources)
-
+    
+#Could - 
+    #1. Add a prediction
+    #2. Do another spreadsheet
