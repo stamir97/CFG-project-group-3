@@ -1,4 +1,5 @@
 import csv
+import pandas as pd
 
 
 def read_data():
@@ -14,11 +15,26 @@ def read_data():
 def run():
     data = read_data()
     sales = []
+
     for row in data:
         sale = int(row['sales'])
         sales.append(sale)
+
     total = sum(sales)
-    print('Total sales: {}'.format(total))
+    print(f'Total sales: {total:,d}')
+
+
+    #using pandas to read file
+    df = pd.read_csv('sales.csv')
+
+    # FINDING MAX AND MIN
+    max_sales = df['sales'].max()
+    min_sales = df['sales'].min()
+    mean_sales = int(df['sales'].mean())
+    print(f'Max sales: {max_sales:,d}')
+    print(f'Min sales: {min_sales:,d}')
+    print(f'Mean sales: {mean_sales:,d}')
+
 
 
 run()
